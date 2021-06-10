@@ -1,6 +1,8 @@
-import discord,  re, os, traceback
+import discord,  re, os, traceback, logging
 from discord.ext import commands
 import B
+
+logging.basicConfig(level=logging.INFO)
 
 async def get_prefix(client, message):
   extras = ["test+","te+", "t+"]
