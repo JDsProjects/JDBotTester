@@ -9,11 +9,11 @@ class Bot(commands.Cog):
 
   @tasks.loop(seconds=40)
   async def status_task(self):
-    await self.bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.listening, name=f"the return of {self.bot.user.name}"))
+    await self.bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.listening, name=f"Testing Bot of JDJG of WIP discord.py versions"))
     await asyncio.sleep(40)
     await self.bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name=f"{len(self.bot.guilds)} servers | {len(self.bot.users)} users"))
     await asyncio.sleep(40)
-    await self.bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name="the new updates coming soon..."))
+    await self.bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name="Epic stuff is coming soon to JDBot."))
     await asyncio.sleep(40)
 
   @status_task.before_loop
@@ -29,7 +29,7 @@ class Bot(commands.Cog):
     info = await self.bot.application_info()
     owner_id = info.team.owner_id if info.team else info.owner.id
 
-    support_guild=self.bot.get_guild(736422329399246990)
+    support_guild=self.bot.get_guild(438848185008390158)
     owner= await self.bot.getch_member(support_guild,owner_id)
     user_type = user_type = ['User', 'Bot'][owner.bot]
 
@@ -70,6 +70,10 @@ class Bot(commands.Cog):
     embed.add_field(name="Highest Role:",value=highest_role)
     embed.set_image(url=owner.avatar_url)
     await ctx.send(embed=embed)
+
+  @commands.command(brief = "about the bot")
+  async def about(self, ctx):
+    await ctx.send('this bot is meant to test out new features of discord.py(from beta) and also new features in general and I want to be able to test them in discord.py, so I can get cricistim amd such.')
 
 def setup(bot):
   bot.add_cog(Bot(bot))
