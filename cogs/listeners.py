@@ -9,8 +9,8 @@ class Events(commands.Cog):
   async def on_guild_join(self,guild):
     channels = [channel for channel in guild.channels]
     roles = roles= [role for role in guild.roles]
-    embed = discord.Embed(title="Bot just joined: "+str(guild.name), color=random.randint(0,16777215))
-    embed.set_thumbnail(url = guild.icon_url)
+    embed = discord.Embed(title=f"Bot just joined: {guild.name}", color=random.randint(0,16777215))
+    embed.set_thumbnail(url = guild.icon.url)
     embed.add_field(name='Server Name:',value=f'{guild.name}')
     embed.add_field(name='Server ID:',value=f'{guild.id}')
     embed.add_field(name='Server region:',value=f'{guild.region}')
@@ -20,14 +20,14 @@ class Events(commands.Cog):
     embed.add_field(name='Member Count:',value=f'{guild.member_count}')
     embed.add_field(name='Amount of Channels:',value=f"{len(channels)}")
     embed.add_field(name='Amount of Roles:',value=f"{len(roles)}")
-    await self.client.get_channel(738912143679946783).send(embed=embed)
+    await self.client.get_channel(852897595869233182).send(embed=embed)
 
   @commands.Cog.listener()
   async def on_guild_remove(self,guild):
     channels = [channel for channel in guild.channels]
     roles = roles= [role for role in guild.roles]
-    embed = discord.Embed(title="Bot just left: "+str(guild.name), color=random.randint(0,16777215))
-    embed.set_thumbnail(url = guild.icon_url)
+    embed = discord.Embed(title=f"Bot just joined: {guild.name}", color=random.randint(0,16777215))
+    embed.set_thumbnail(url = guild.icon.url)
     embed.add_field(name='Server Name:',value=f'{guild.name}')
     embed.add_field(name='Server ID:',value=f'{guild.id}')
     embed.add_field(name='Server region:',value=f'{guild.region}')
@@ -40,7 +40,7 @@ class Events(commands.Cog):
       pass
     embed.add_field(name='Amount of Channels:',value=f"{len(channels)}")
     embed.add_field(name='Amount of Roles:',value=f"{len(roles)}")
-    await self.client.get_channel(738912143679946783).send(embed=embed)
+    await self.client.get_channel(852897595869233182).send(embed=embed)
 
   @commands.Cog.listener()
   async def on_ready(self):
@@ -61,10 +61,10 @@ class Events(commands.Cog):
       
       time_used=(message.created_at).strftime('%m/%d/%Y %H:%M:%S')
       embed_message = discord.Embed(title=f" {test.prefix}{test.invoked_with}", description=time_used,color=random.randint(0, 16777215))
-      embed_message.set_author(name=f"{message.author} tried to excute invalid command:",icon_url=(message.author.avatar_url))
+      embed_message.set_author(name=f"{message.author} tried to excute invalid command:",icon_url=(message.author.avatar.url))
       embed_message.set_footer(text = f"{message.author.id}")
       embed_message.set_thumbnail(url="https://i.imgur.com/bW6ergl.png")
-      await self.client.get_channel(738912143679946783).send(embed=embed_message)
+      await self.client.get_channel(852897595869233182).send(embed=embed_message)
   
   @commands.Cog.listener()
   async def on_error(event,*args,**kwargs):

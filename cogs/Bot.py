@@ -3,7 +3,7 @@ import discord, random , time, asyncio, difflib, typing
 from discord.ext.commands.cooldowns import BucketType
 
 class Bot(commands.Cog):
-  def __init__(self,bot):
+  def __init__(self, bot):
     self.bot = bot
     self.status_task.start()
 
@@ -68,12 +68,21 @@ class Bot(commands.Cog):
     embed.add_field(name="ID:",value=owner.id)
     embed.add_field(name="Status:",value=status)
     embed.add_field(name="Highest Role:",value=highest_role)
-    embed.set_image(url=owner.avatar_url)
+    embed.set_image(url=owner.avatar.url)
     await ctx.send(embed=embed)
 
   @commands.command(brief = "about the bot")
   async def about(self, ctx):
     await ctx.send('this bot is meant to test out new features of discord.py(from beta) and also new features in general and I want to be able to test them in discord.py, so I can get cricistim amd such.')
+
+  @commands.command(brief = "ask a command to be ported from JDBot")
+  async def port_command(self, ctx, *, args = None):
+    if not args:
+      return await ctx.send("You need to give me the command name not empty.")
+
+    if args:
+      jdjg = await self.bot.getch_user(168422909482762240)
+      await jdjg.send(f"{ctx.author} wants {args}")
 
 def setup(bot):
   bot.add_cog(Bot(bot))
