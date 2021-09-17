@@ -1,5 +1,6 @@
 import contextlib, aiohttp, re, discord, os, traceback
 from discord.ext import commands
+from discord.ext.menus.views import ViewMenuPages
 
 async def get_prefix(bot, message):
   extras = ["test+","te+", "t+"]

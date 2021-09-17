@@ -191,6 +191,26 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "orion.py"
+version = "2.3.1"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.8.0"
+develop = false
+
+[package.extras]
+voice = ["PyNaCl (>=1.3.0,<1.5)"]
+docs = ["sphinx (==4.0.2)", "sphinxcontrib_trio (==1.1.2)", "sphinxcontrib-websupport"]
+speed = ["orjson (>=3.5.4)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/Senarc-Studios/Orion.py"
+reference = "Development"
+resolved_reference = "edb7748f1960b555e9de79043df344e2bc989583"
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -232,7 +252,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "1c5b2f3e82f30a6865078549d84c713002d7ceaf22cee87b279d5f975af64ed9"
+content-hash = "3e07308b4c6720051396b39d93f86ba7034f0af9f324a7df98c8725e8ff023e0"
 
 [metadata.files]
 aiohttp = [
@@ -418,6 +438,7 @@ multidict = [
     {file = "multidict-5.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:7df80d07818b385f3129180369079bd6934cf70469f99daaebfac89dca288359"},
     {file = "multidict-5.1.0.tar.gz", hash = "sha256:25b4e5f22d3a37ddf3effc0710ba692cfc792c2b9edfb9c05aefe823256e84d5"},
 ]
+"orion.py" = []
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
