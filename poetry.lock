@@ -104,26 +104,6 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
-name = "fusion.py"
-version = "2.2.5"
-description = ""
-category = "main"
-optional = false
-python-versions = ">=3.8.0"
-develop = false
-
-[package.extras]
-voice = ["PyNaCl (>=1.3.0,<1.5)"]
-docs = ["sphinx (==4.0.2)", "sphinxcontrib_trio (==1.1.2)", "sphinxcontrib-websupport"]
-speed = ["orjson (>=3.5.4)"]
-
-[package.source]
-type = "git"
-url = "https://github.com/Senarc-Studios/Orion.py"
-reference = "Development"
-resolved_reference = "f8cd9582ab4cd33acdb1d5b4bed3b505ae1c34b3"
-
-[[package]]
 name = "idna"
 version = "3.2"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -252,7 +232,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "4c851367a665da9642adb45d6ea18a160a043877ccd2bc4855b310448e42c307"
+content-hash = "1c5b2f3e82f30a6865078549d84c713002d7ceaf22cee87b279d5f975af64ed9"
 
 [metadata.files]
 aiohttp = [
@@ -326,7 +306,6 @@ flask = [
     {file = "Flask-2.0.2-py3-none-any.whl", hash = "sha256:cb90f62f1d8e4dc4621f52106613488b5ba826b2e1e10a33eac92f723093ab6a"},
     {file = "Flask-2.0.2.tar.gz", hash = "sha256:7b2fb8e934ddd50731893bdcdb00fc8c0315916f9fcd50d22c7cc1a95ab634e2"},
 ]
-"fusion.py" = []
 idna = [
     {file = "idna-3.2-py3-none-any.whl", hash = "sha256:14475042e284991034cb48e06f6851428fb14c4dc953acd9be9a5e95c7b6dd7a"},
     {file = "idna-3.2.tar.gz", hash = "sha256:467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3"},
