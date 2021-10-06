@@ -1,7 +1,6 @@
-from discord.ext import commands, tasks
+from discord.ext import commands, tasks, menus
 import discord, random , time, asyncio, difflib, typing
 from discord.ext.commands.cooldowns import BucketType
-from discord.ext import commands, menus
 from discord.ext.menus.views import ViewMenuPages
 
 class Bot(commands.Cog):
@@ -85,6 +84,9 @@ class Bot(commands.Cog):
     if args:
       jdjg = await self.bot.getch_user(168422909482762240)
       await jdjg.send(f"{ctx.author} wants {args}")
+
+  
+  
 
 def setup(bot):
   bot.add_cog(Bot(bot))

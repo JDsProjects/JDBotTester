@@ -149,7 +149,7 @@ i18n = ["Babel (>=2.7)"]
 
 [[package]]
 name = "jishaku"
-version = "2.3.0a345+gd3f5074.master"
+version = "2.3.0a346+g4027c12.master"
 description = "A discord.py extension including useful tools for bot development and debugging."
 category = "main"
 optional = false
@@ -172,7 +172,7 @@ voice = ["youtube-dl"]
 type = "git"
 url = "https://github.com/Gorialis/jishaku.git"
 reference = "master"
-resolved_reference = "d3f50749b5a977b544e5fd14894585f656247486"
+resolved_reference = "4027c127bc67b8c2b799b81934001e25c26ff15e"
 
 [[package]]
 name = "markupsafe"
@@ -192,7 +192,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "orion.py"
-version = "2.3.1"
+version = "2.2.3"
 description = ""
 category = "main"
 optional = false
@@ -208,7 +208,7 @@ speed = ["orjson (>=3.5.4)"]
 type = "git"
 url = "https://github.com/Senarc-Studios/Orion.py"
 reference = "Development"
-resolved_reference = "edb7748f1960b555e9de79043df344e2bc989583"
+resolved_reference = "2bd0b8573dd6bf5f779e197b402a15336098445e"
 
 [[package]]
 name = "six"
