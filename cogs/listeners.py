@@ -6,7 +6,7 @@ class Events(commands.Cog):
     self.client = client
   
   @commands.Cog.listener()
-  async def on_guild_join(self,guild):
+  async def on_guild_join(self, guild):
     channels = [channel for channel in guild.channels]
     roles = roles= [role for role in guild.roles]
     embed = discord.Embed(title=f"Bot just joined: {guild.name}", color=random.randint(0,16777215))
