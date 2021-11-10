@@ -1,8 +1,7 @@
-from discord.ext import commands, tasks
-#put menus
+from discord.ext import commands, tasks, menus
 import discord, random , time, asyncio, difflib, typing
 from discord.ext.commands.cooldowns import BucketType
-#from discord.ext.menus.views import ViewMenuPages
+from discord.ext.menus.views import ViewMenuPages
 
 class Bot(commands.Cog):
   def __init__(self, bot):
