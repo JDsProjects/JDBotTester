@@ -85,7 +85,10 @@ class Bot(commands.Cog):
       jdjg = await self.bot.getch_user(168422909482762240)
       await jdjg.send(f"{ctx.author} wants {args}")
 
-  
+  @commands.command(brief = "test")
+  async def test_guild(self, ctx):
+    guild = await self.bot.fetch_guild(ctx.guild.id)
+    print(guild.approximate_member_count, guild.approximate_presence_count)
   
 
 def setup(bot):

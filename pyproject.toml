@@ -8,8 +8,7 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.8"
 Flask = "^2.0.1"
 jishaku = {git = "https://github.com/Gorialis/jishaku.git"}
-aiohttp = "^3.7.4"
-"fusion.py" = {git = "https://github.com/Senarc-Studios/Fusion.py", branch = "Development"}
+"fusion.py" = {git = "https://github.com/Senarc-Studios/Fusion.py"}
 
 [tool.poetry.dev-dependencies]
 
