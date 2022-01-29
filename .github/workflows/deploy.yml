@@ -13,6 +13,6 @@ jobs:
     steps:
       
     - name: Deploy JDBotTester
-      uses: JDJGInc/JDBotTester
+      uses: JDJGInc/JDBotTester@master
       env:
         TOKEN: ${{ secrets.TOKEN }}
