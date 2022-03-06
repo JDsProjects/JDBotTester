@@ -1,4 +1,4 @@
 Flask
 git+https://github.com/Gorialis/jishaku.git
-git+https://github.com/iDevision/enhanced-discord.py@2.0
+git+https://github.com/Rapptz/discord.py
 python-dotenv
