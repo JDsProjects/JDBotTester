@@ -1,6 +1,7 @@
 from discord.ext import commands, tasks
 import discord, random, time, asyncio, difflib, typing
 from discord.ext.commands.cooldowns import BucketType
+import time
 
 
 class Bot(commands.Cog):
@@ -104,6 +105,20 @@ class Bot(commands.Cog):
         if args:
             jdjg = await self.bot.getch_user(168422909482762240)
             await jdjg.send(f"{ctx.author} wants {args}")
+
+    @commands.command(brief="sends pong and the time it took to do so.")
+    async def ping(self, ctx):
+        start = time.perf_counter()
+        message = await ctx.send("Ping")
+        end = time.perf_counter()
+
+        embed = discord.Embed(title="Bot Ping Data", color=15428885, timestamp=ctx.message.created_at)
+
+        embed.add_field(name="Bot Latency:", value=f"{round((end - start)*1000)} MS", inline=False)
+
+        embed.add_field(name="Websocket Response time:", value=f"{round(self.bot.latency*1000)} MS", inline=False)
+
+        await message.edit(content=f"Pong", embed=embed)
 
 
 def setup(bot):
