@@ -7,5 +7,5 @@ class Buttons(commands.Cog):
         self.bot = bot
 
 
-def setup(bot):
-    bot.add_cog(Buttons(bot))
+async def setup(bot):
+    await bot.add_cog(Buttons(bot))

@@ -37,10 +37,19 @@ class JDBotTester(commands.Bot):
             user = self.get_user(user_id) or await self.fetch_user(user_id)
         return user
 
+    async def setup_hook(self):
+        for filename in os.listdir("./cogs"):
+            if filename.endswith(".py"):
+                try:
+                    await self.load_extension(f"cogs.{filename[:-3]}")
+
+                except commands.errors.ExtensionError:
+                    traceback.print_exc()
+
+        await self.load_extension("jishaku")
+
 
 bot = JDBotTester(command_prefix=(get_prefix), intents=discord.Intents.all(), strip_after_prefix=True)
-
-bot.load_extension("jishaku")
 
 
 @bot.event
@@ -49,11 +58,3 @@ async def on_error(event, *args, **kwargs):
     error_wanted = traceback.format_exc()
     traceback.print_exc()
     # print(more_information[0])
-
-
-for filename in os.listdir("./cogs"):
-    if filename.endswith(".py"):
-        try:
-            bot.load_extension(f"cogs.{filename[:-3]}")
-        except commands.errors.ExtensionError:
-            traceback.print_exc()

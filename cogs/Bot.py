@@ -121,5 +121,5 @@ class Bot(commands.Cog):
         await message.edit(content=f"Pong", embed=embed)
 
 
-def setup(bot):
-    bot.add_cog(Bot(bot))
+async def setup(bot):
+    await bot.add_cog(Bot(bot))
