@@ -1,5 +1,8 @@
+import os
+import random
+
+import discord
 from discord.ext import commands
-import discord, random, os
 
 
 class Buttons(commands.Cog):

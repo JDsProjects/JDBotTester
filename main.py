@@ -1,6 +1,10 @@
-import os, traceback, logging
-import BotConfig
+import logging
+import os
+import traceback
+
 import dotenv
+
+import BotConfig
 
 logging.basicConfig(level=logging.INFO)
 

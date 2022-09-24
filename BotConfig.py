@@ -1,4 +1,11 @@
-import contextlib, aiohttp, re, discord, os, traceback
+import contextlib
+import os
+import re
+import sys
+import traceback
+
+import aiohttp
+import discord
 from discord.ext import commands
 
 
@@ -54,7 +61,7 @@ bot = JDBotTester(command_prefix=(get_prefix), intents=discord.Intents.all(), st
 
 @bot.event
 async def on_error(event, *args, **kwargs):
-    more_information = os.sys.exc_info()
+    more_information = sys.exc_info()
     error_wanted = traceback.format_exc()
     traceback.print_exc()
     # print(more_information[0])
