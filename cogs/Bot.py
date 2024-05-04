@@ -19,7 +19,7 @@ class Bot(commands.Cog):
         await self.bot.change_presence(
             status=discord.Status.online,
             activity=discord.Activity(
-                type=discord.ActivityType.listening, name=f"Testing Bot of JDJG of WIP discord.py versions"
+                type=discord.ActivityType.listening, name="Testing Bot of JDJG of WIP discord.py versions"
             ),
         )
         await asyncio.sleep(40)
@@ -123,7 +123,7 @@ class Bot(commands.Cog):
 
         embed.add_field(name="Websocket Response time:", value=f"{round(self.bot.latency*1000)} MS", inline=False)
 
-        await message.edit(content=f"Pong", embed=embed)
+        await message.edit(content="Pong", embed=embed)
 
 
 async def setup(bot):
