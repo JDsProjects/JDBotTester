@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "jdbottester"
+version = "0.1.0"
+description = ""
+authors = ["JDBot <jdjgbot@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+flask = ">=3.0.3"
+discord-py = {git = "https://github.com/Rapptz/discord.py"}
+jishaku = {git = "https://github.com/Gorialis/jishaku.git"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
